@@ -1,0 +1,151 @@
+@import "reset";
+@import "skeleton.css";
+
+/* ------- COLORS --------- */
+@primary: #58CBF5;
+@secondary: #333333;
+
+/* ------- FONT VARIABLES --------- */
+
+@sans-stack: "Futura", Helvetica Neue, Arial, sans-serif;
+
+/* ------- CSS3 STUFFS --------- */
+.transition(
+	@what : all,
+	@length : 0.3s,
+	@easing : ease-in-out
+) {
+	-webkit-transition: @what @length @easing;
+	   -moz-transition: @what @length @easing;
+	     -o-transition: @what @length @easing;
+		  	transition: @what @length @easing;			
+}
+
+* { margin: 0; padding: 0; } 
+
+html {}
+
+body {
+	background: rgb(215, 215, 215);
+	background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+	background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+	background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+	background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+	background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+	-webkit-font-smoothing: antialiased;
+	font-family: @sans-stack;
+	color: #444;
+}
+
+a { 
+	text-decoration: none; 
+	color: @primary; 
+	outline: none;
+	.transition();
+	
+	&:hover, &:active {
+		color: #FFF;
+	} 
+}
+
+.container {
+	margin: 8% auto;
+}
+
+h1, h2, h3, h4 {
+	text-transform: uppercase;
+}
+
+h1 {
+	text-align: center;
+	margin: 50px auto;
+	font-size: 60px; 
+	
+}
+
+h2 {
+	font-size: 24px;
+	line-height: 36px;
+}
+
+p {
+	line-height: 1.8em;
+}
+
+#ts-e4m {
+	input[type="submit"]  {	
+		border: none;
+		border-radius: 0;
+		background: @primary;
+	    color: #FFFFFF;
+	    cursor: pointer;
+	    display: inline-block;
+	    font-family: @sans-stack;
+		text-transform: uppercase;
+	    font-size: 24px;
+	    line-height: normal !important;
+	    padding: 30px 25px;
+	    position: relative;
+	    text-decoration: none;
+		width: 100%;
+		margin-top: -1px;
+		text-shadow: none;
+		margin: 0;
+		-webkit-appearance:none;
+	    .transition();
+
+		&:hover, &:active {
+			color: #FFFFFF;
+			background: @secondary;
+			border: none;
+		}
+	}
+
+	input[type="email"] {
+		font-style: italic;
+		border-radius: 0;
+		width: 100%;
+		font-size: 24px;
+		height: 30px !important;
+		color: #222;
+		background: #FFF;
+		border: none;
+		padding: 30px 5px;
+		border: solid 1px #FFF;
+		margin: 0;
+		text-shadow: none !important;
+		.transition();
+
+		&:focus {
+			color: #FFF;
+			background: #222;
+		}
+	}
+}
+
+#explain {
+	margin: 25px auto;
+}
+
+.dl {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 24px;
+	margin: 25px auto;
+	display: block;
+	background: @primary;
+	color: #FFF;
+	padding: 25px 10px;
+	width: 40%;
+	
+	&:hover {
+		background: @secondary;
+	}
+}
+
+footer {
+	text-align: center;
+	margin: 50px auto;
+	text-transform: uppercase;
+	font-size: 12px;
+}

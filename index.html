@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+	<title>Topspin Powered HTML E4M</title>
+	
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+		
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+	<div class="container">
+		
+		<h1>Topspin Powered HTML E4M</h1>
+		
+		<div id="ts-e4m" class="row clearfix">	
+			<form id="signup" action="assets/includes/send.php" method="post" >
+				<div class="twelve columns">
+					<input id="email"  name="fan[email]" type="email" value="enter your email here" placeholder="enter your email here" class="erase email" />	
+					<input name="artist_id" value="1051" id="artist_id" type="hidden">
+					<input name="fan[source_campaign]" value="http://app.topspin.net/api/v1/artist/1051/campaign/10150220" id="source_campaign" type="hidden">
+					<input name="fan[referring_url]" value="http://www.eyesandearsentertainment.com" id="referring_url" type="hidden">
+					<input name="fan[confirmation_target]" value="http://www.topspindownloads.com/confirm/" id="confirmation_target" type="hidden">			
+				</div>
+				<div class="four columns">
+					<input name="submit" type="submit" value="submit" />
+				</div>
+			</form>
+		</div>
+		
+	</div><!-- container -->
+				
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.form.js"></script>
+	<script type="text/javascript" src="assets/js/init.js"></script>
+
+</body>
+
+</html>
