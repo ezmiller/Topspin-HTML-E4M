@@ -22,7 +22,10 @@ $(document).ready(function() {
 	$('#signup').bind('submit', function(e) {
 		e.preventDefault();
 		$(this).ajaxSubmit({
-			success: function() { $('#email').val('Thanks, Check Your Inbox!'); }			
+			success: function() { 
+				$('#email').val('Thanks, Check Your Inbox!');
+				$('#email, #submit').prop('disabled', true); 
+			}			
 		});
 	});
 	

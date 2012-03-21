@@ -30,7 +30,7 @@ This markup provides the necessary visible and hidden inputs to properly relay i
 	<input name="fan[source_campaign]" value="http://app.topspin.net/api/v1/artist/1051/campaign/10150220" id="source_campaign" type="hidden">
 	<input name="fan[referring_url]" value="http://www.eyesandearsentertainment.com" id="referring_url" type="hidden">
 	<input name="fan[confirmation_target]" value="http://www.topspindownloads.com/confirm/" id="confirmation_target" type="hidden">			
-	<input name="submit" type="submit" value="submit" />
+	<input id="submit" name="submit" type="submit" value="submit" />
 </form>
 ````
 
@@ -43,7 +43,10 @@ Utilize jQuery form to submit the form via AJAX. Includes a basic success functi
 $('#signup').bind('submit', function(e) {
 	e.preventDefault();
 	$(this).ajaxSubmit({
-		success: function() { $('#email').val('Thanks, Check Your Inbox!'); }			
+		success: function() { 
+			$('#email').val('Thanks, Check Your Inbox!'); //return a thank you message 
+			$('#email, #submit').prop('disabled', true); //disable the form upon submit
+		}			
 	});
 });
 ````
