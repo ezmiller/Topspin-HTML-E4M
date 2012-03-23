@@ -21,7 +21,7 @@ Working Demo: http://www.eyesandearsentertainment.com/htmle4m/
 ###HTML Form
 This markup provides the necessary visible and hidden inputs to properly relay information to the Topspin REST API. Change the `artist_id`, `fan[source_campaign]`, and `fan[referring_url]`, `fan[confirmation_target]`. In order to provide the `fan[source_campaign]`, you will need a relevant Topspin account and an Email For Media widget created within the platform. To locate the `fan[source_campaign]`, simply do the following:
 
-1. Find the widget_id=”" url in your embed code
+1. Find the widget_id="" url in your embed code
 2. Paste that into a browser
 3. Find the url inside the <campaign> tag (ex. http://app.topspin.net/api/v1/artist/1051/campaign/10150220)
 
@@ -85,7 +85,7 @@ $('input.erase').each(function() {
 
 Extract POST variables from the HTML form, open connection to Topspin API and send relevant fan email information. This will be the function that the HTML form action submits to over AJAX.
 
-````php
+````html
 <?php
 
 	extract($_POST);
@@ -131,6 +131,7 @@ Extract POST variables from the HTML form, open connection to Topspin API and se
 	// and finally return true
 	header('Content-type: application/json');
 	echo json_encode($message);
+
 ````
 
 ---
@@ -146,7 +147,6 @@ The MIT License is recommended for most projects. It is simple and easy to under
 
 If the GPL suits your project better you are also free to use the plugin under that license.
 
-You don't have to do anything special to choose one license or the other and you don't have to notify anyone which license you are using. You are free to use the Topspin HTML E4M in commercial projects 
+You don't have to do anything special to choose one license or the other and you don't have to notify anyone which license you are using. You are free to use the Topspin HTML E4M in commercial projects.
 
 ---
-
