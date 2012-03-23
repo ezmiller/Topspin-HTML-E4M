@@ -5,6 +5,8 @@ Quickly create an HTML and jQuery powered Topspin Email For Media Widget. Benefi
 
 Making your own custom HTML E4M doesn't get any easier than this!
 
+Working Demo: http://www.eyesandearsentertainment.com/htmle4m/
+
 ---
  
 ##Installation
@@ -17,11 +19,13 @@ Making your own custom HTML E4M doesn't get any easier than this!
 ````
 
 ###HTML Form
-This markup provides the necessary visible and hidden inputs to properly relay information to the Topspin REST API. Change the `artist_id`, `fan[source_campaign]`, and `fan[referring_url]`. In order to provide the `fan[source_campaign]`, you will need a relevant Topspin account and an Email For Media widget created within the platform. To locate the `fan[source_campaign]`, simply do the following:
+This markup provides the necessary visible and hidden inputs to properly relay information to the Topspin REST API. Change the `artist_id`, `fan[source_campaign]`, and `fan[referring_url]`, `fan[confirmation_target]`. In order to provide the `fan[source_campaign]`, you will need a relevant Topspin account and an Email For Media widget created within the platform. To locate the `fan[source_campaign]`, simply do the following:
 
 1. Find the widget_id=”" url in your embed code
 2. Paste that into a browser
 3. Find the url inside the <campaign> tag (ex. http://app.topspin.net/api/v1/artist/1051/campaign/10150220)
+
+In order to provide the `fan[confirmation_target]`, you will need to create a new Topspin Labs Download Anywhere URL. Go to http://labs.topspin.net/downloadanywhere/ and enter your credentials. Once generated, replace the `fan[confirmation_target]` value with your unique Download Anywhere URL.
 
 ````html
 <form id="signup" action="assets/includes/send.php" method="post" >
@@ -29,7 +33,7 @@ This markup provides the necessary visible and hidden inputs to properly relay i
 	<input name="artist_id" value="1051" id="artist_id" type="hidden">
 	<input name="fan[source_campaign]" value="http://app.topspin.net/api/v1/artist/1051/campaign/10150220" id="source_campaign" type="hidden">
 	<input name="fan[referring_url]" value="http://www.eyesandearsentertainment.com" id="referring_url" type="hidden">
-	<input name="fan[confirmation_target]" value="http://www.topspindownloads.com/confirm/" id="confirmation_target" type="hidden">			
+	<input name="fan[confirmation_target]" value="http://labs.topspin.net/downloadanywhere/confirm.php?sessionid=188a0d0a116380c2180c37a7dcb33e1e" id="confirmation_target" type="hidden">			
 	<input id="submit" name="submit" type="submit" value="submit" />
 </form>
 ````
